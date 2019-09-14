@@ -26,6 +26,11 @@ function getNextId(id, largest){
 	return next ? next : +largest
 }
 
+function getPrevId(id, largest){
+	let prev = +id - 1
+	return prev ? prev : largest
+}
+
 function activateSlide(id){
 	let slideToActivate = document.querySelector(`[data-id="${id}"]`)
 	store.currentSlide.classList.remove("active")
