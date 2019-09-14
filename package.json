@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/iammadab/slide-deck/issues"
   },
-  "homepage": "https://github.com/iammadab/slide-deck#readme"
+  "homepage": "https://github.com/iammadab/slide-deck#readme",
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "socket.io": "^2.2.0"
+  }
 }
