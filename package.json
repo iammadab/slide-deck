@@ -1,0 +1,19 @@
+{
+  "name": "slide-deck",
+  "version": "1.0.0",
+  "description": "Present your slides on the web, use your phone as a controller",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iammadab/slide-deck.git"
+  },
+  "author": "Wisdom Ogwu (iammadab)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iammadab/slide-deck/issues"
+  },
+  "homepage": "https://github.com/iammadab/slide-deck#readme"
+}
