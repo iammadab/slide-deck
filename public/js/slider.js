@@ -1,11 +1,26 @@
 let store = {
 	currentSlide: null,
-	largestId: null
+	largestId: null,
+	keyMap: {
+		"arrowright": next, 
+		"enter": next,
+		" ": next,
+		"n": next,
+		"arrowleft": prev, 
+		"p": prev
+	}
 }
 
 ;(function getInitData(){
 	store.currentSlide = getCurrentSlide()
 	store.largestId = getLargestSlideId()
+})()
+
+;(function addTouchEvents(){
+	window.addEventListener("keydown", (event) => {
+		if(store.keyMap[event.key.toLowerCase()])
+			store.keyMap[event.key.toLowerCase()]()
+	})
 })()
 
 function getCurrentSlide(){
