@@ -2,10 +2,12 @@ let store = {
 	currentSlide: null,
 	largestId: null,
 	keyMap: {
+		"next": next,
 		"arrowright": next, 
 		"enter": next,
 		" ": next,
 		"n": next,
+		"prev": prev,
 		"arrowleft": prev, 
 		"p": prev
 	}
