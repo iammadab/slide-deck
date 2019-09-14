@@ -44,3 +44,30 @@
 .begin-button:hover{
 	border: 3px solid white;
 }
+
+
+
+
+/* Slider styles */
+
+.slider-section{
+	background-color: #1f1e1e;
+	height: 100vh;
+	width: 100vw;
+}
+
+.images{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.images img{
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+.images img.active{
+	display: block;
+}
