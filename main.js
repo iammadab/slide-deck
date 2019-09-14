@@ -10,6 +10,15 @@ const PORT = 3000
 app.use(express.static(path.resolve(__dirname, "public")))
 app.set("view engine", "ejs")
 
+
+io.on("connection", socket => {
+	socket.on("action", data => {
+		io.emit("action", data)
+	})
+})
+
+
+// Application Routes
 app.get("/", (req, res) => {
 	res.render("slider-info")
 })
@@ -17,6 +26,10 @@ app.get("/", (req, res) => {
 app.get("/slides", (req, res) => {
 	res.render("slider")
 })
+
+
+
+
 
 server.listen(PORT, () => {
 	console.log("Application listening at port " + PORT)
