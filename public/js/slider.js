@@ -9,3 +9,8 @@ function getCurrentSlide(){
 	store.currentSlide = currentSlide
 }
 
+function getLargestSlideId(){
+	let allSlides = document.querySelectorAll(".images img")
+	return allSlides.length - 1
+}
+
