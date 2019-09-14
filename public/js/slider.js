@@ -43,6 +43,7 @@ function getNextId(id, largest){
 
 function getPrevId(id, largest){
 	let prev = +id - 1
+	// When the previous number is 0 I return the largest number
 	return prev ? prev : largest
 }
 
