@@ -41,3 +41,7 @@ function activateSlide(id){
 function next(){
 	activateSlide(getNextId(store.currentSlide.dataset.id, store.largestId))
 }
+
+function prev(){
+	activateSlide(getPrevId(store.currentSlide.dataset.id, store.largestId))
+}
