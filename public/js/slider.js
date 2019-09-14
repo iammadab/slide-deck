@@ -9,7 +9,8 @@ let store = {
 		"n": next,
 		"prev": prev,
 		"arrowleft": prev, 
-		"p": prev
+		"p": prev,
+		"f": toggleFullScreen
 	}
 }
 
@@ -73,4 +74,11 @@ function prev(){
 function executeAction(action){
 	if(store.keyMap[action.toLowerCase()])
 			store.keyMap[action.toLowerCase()]()
+}
+
+function toggleFullScreen(){
+	if(!document.fullscreenElement)
+		document.documentElement.requestFullscreen()
+	else if(document.exitFullscreen)
+		document.exitFullscreen()
 }
