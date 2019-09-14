@@ -18,8 +18,14 @@ let store = {
 
 ;(function addTouchEvents(){
 	window.addEventListener("keydown", (event) => {
-		if(store.keyMap[event.key.toLowerCase()])
-			store.keyMap[event.key.toLowerCase()]()
+		executeAction(event.key)
+	})
+})()
+
+;(function connectToSocketIO(){
+	var socket = io.connect()
+	socket.on("action", data => {
+		executeAction(data.action)
 	})
 })()
 
@@ -60,4 +66,9 @@ function next(){
 
 function prev(){
 	activateSlide(getPrevId(store.currentSlide.dataset.id, store.largestId))
+}
+
+function executeAction(action){
+	if(store.keyMap[action.toLowerCase()])
+			store.keyMap[action.toLowerCase()]()
 }
