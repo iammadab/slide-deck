@@ -19,11 +19,11 @@ function getLargestSlideId(){
 }
 
 function getNextId(id, largest){
-	let next =  (id + 1) % largest
+	let next =  (+id + 1) % +largest
 	// When the next number is the number just before the last, the above returns 0 
 	// What I want is the largest
 	// So the tenary operator below is saying if the number is 0 return the largest else return the number
-	return next ? next : largest
+	return next ? next : +largest
 }
 
 function activateSlide(id){
@@ -31,4 +31,8 @@ function activateSlide(id){
 	store.currentSlide.classList.remove("active")
 	slideToActivate.classList.add("active")
 	store.currentSlide = slideToActivate
+}
+
+function next(){
+	activateSlide(getNextId(store.currentSlide.dataset.id, store.largestId))
 }
