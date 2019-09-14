@@ -1,16 +1,25 @@
 let store = {
-	currentSlide: null
+	currentSlide: null,
+	largestId: null
 }
 
-getCurrentSlide()
+;(function getInitData(){
+	store.currentSlide = getCurrentSlide()
+	store.largestId = getLargestSlideId()
+})()
 
 function getCurrentSlide(){
 	let currentSlide = document.querySelector("img.active")
-	store.currentSlide = currentSlide
+	return currentSlide
 }
 
 function getLargestSlideId(){
 	let allSlides = document.querySelectorAll(".images img")
-	return allSlides.length - 1
+	return allSlides.length
+}
+
+function getNextId(id, largest){
+	let next =  (id + 1) % largest
+	return next ? next : largest
 }
 
