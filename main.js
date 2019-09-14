@@ -27,6 +27,10 @@ app.get("/slides", (req, res) => {
 	res.render("slider")
 })
 
+app.get("/slides/controller", (req, res) => {
+	res.render("slider-controller")
+})
+
 
 
 

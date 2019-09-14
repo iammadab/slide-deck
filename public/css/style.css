@@ -71,3 +71,11 @@
 .images img.active{
 	display: block;
 }
+
+
+/* controller styles */
+.slider-controller-section{
+	background-color: #1f1e1e;
+	width: 100vw;
+	height: 100vh;
+}
