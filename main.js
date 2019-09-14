@@ -2,6 +2,8 @@ const express = require("express")
 const path = require("path")
 
 const app = express()
+const server = require("http").createServer(app)
+const io = require("socket.io").listen(server)
 
 const PORT = 3000
 
@@ -16,6 +18,6 @@ app.get("/slides", (req, res) => {
 	res.render("slider")
 })
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
 	console.log("Application listening at port " + PORT)
 })
